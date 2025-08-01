@@ -46,8 +46,9 @@ export default function Watchlist() {
                         </tr>
                     </thead>
                     <tbody>
-                        {coins.map(coin =>(
+                        {coins.map((coin, index) =>(
                             <tr key={coin.id} className='border-b hover:bg-gray-50'>
+                                 <td>{index + 1}</td> 
                                 <td className='flex items-center gap-2 py-2'>
                                     <img src={coin.image} alt={coin.name} className="w-5 h-5" />
                                     <Link to={`/coin/${coin.id}`} className="text-blue-600 hover:underline">
